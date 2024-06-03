@@ -1,0 +1,17 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Home Page";
+}
+
+@Html.Partial("_Header")
+
+<h2>Welcome to our Volunteering Platform!</h2>
+<p>Connect with other university students to offer your skills and participate in tasks across different regions in Jordan.</p>
+<p>
+    <a href="/About" class="btn btn-primary">Learn More About Us</a>
+    <a href="/Services" class="btn btn-secondary">Explore Our Services</a>
+</p>
+@Html.Partial("~/Views/Volunteering/VolunteeringForm.cshtml")
+
+
+@Html.Partial("_Footer")

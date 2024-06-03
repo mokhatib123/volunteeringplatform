@@ -1,0 +1,69 @@
+﻿@model WebApplication10.Models.VolunteeringFormViewModel
+
+@using (Html.BeginForm("SubmitVolunteerForm", "Volunteering", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <!-- Region -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.RegionId)
+        @Html.TextBoxFor(model => model.RegionId, new { @class = "form-control", placeholder = "Enter your region" })
+        @Html.ValidationMessageFor(model => model.RegionId)
+    </div>
+
+    <!-- Skill -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.SkillId)
+        @Html.TextBoxFor(model => model.SkillId, new { @class = "form-control", placeholder = "Enter your skill" })
+        @Html.ValidationMessageFor(model => model.SkillId)
+    </div>
+
+    <!-- Student Name -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.StudentName)
+        @Html.TextBoxFor(model => model.StudentName, new { @class = "form-control", placeholder = "Enter your name" })
+        @Html.ValidationMessageFor(model => model.StudentName)
+    </div>
+
+    <!-- Student Email -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.StudentEmail)
+        @Html.TextBoxFor(model => model.StudentEmail, new { @class = "form-control", placeholder = "Enter your email" })
+        @Html.ValidationMessageFor(model => model.StudentEmail)
+    </div>
+
+    <!-- Student Phone -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.StudentPhone)
+        @Html.TextBoxFor(model => model.StudentPhone, new { @class = "form-control", placeholder = "Enter your phone number" })
+        @Html.ValidationMessageFor(model => model.StudentPhone)
+    </div>
+
+    <!-- University -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.University)
+        @Html.TextBoxFor(model => model.University, new { @class = "form-control", placeholder = "Enter your university" })
+    </div>
+
+    <!-- Major -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.Major)
+        @Html.TextBoxFor(model => model.Major, new { @class = "form-control", placeholder = "Enter your major" })
+    </div>
+
+    <!-- Task Name -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.TaskName)
+        @Html.TextBoxFor(model => model.TaskName, new { @class = "form-control", placeholder = "Enter the task name" })
+        @Html.ValidationMessageFor(model => model.TaskName)
+    </div>
+
+    <!-- Task Description -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.TaskDescription)
+        @Html.TextAreaFor(model => model.TaskDescription, new { @class = "form-control", rows = 4, placeholder = "Enter the task description" })
+        @Html.ValidationMessageFor(model => model.TaskDescription)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+}
